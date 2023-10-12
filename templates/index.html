@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Outlet Sales Prediction</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Item Outlet Sales Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Item_Weight">Item Weight:</label>
+        <input type="text" name="Item_Weight" id="Item_Weight" required>
+
+        <label for="Item_Fat_Content">Item Fat Content:</label>
+        <select name="Item_Fat_Content" id="Item_Fat_Content">
+            <option value="Low Fat">Low Fat</option>
+            <option value="Regular">Regular</option>
+            <option value="LF">LF</option>
+            <option value="low fat">low fat</option>
+            <option value="reg">reg</option>
+        </select>
+
+        <label for="Item_Visibility">Item Visibility:</label>
+        <input type="text" name="Item_Visibility" id="Item_Visibility" required>
+
+        <label for="Item_Type">Item Type:</label>
+        <select name="Item_Type" id="Item_Type">
+            <option value="Baking Goods">Baking Goods</option>
+            <option value="Breads">Breads</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Canned">Canned</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Frozen Foods">Frozen Foods</option>
+            <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+            <option value="Hard Drinks">Hard Drinks</option>
+            <option value="Health and Hygiene">Health and Hygiene</option>
+            <option value="Household">Household</option>
+            <option value="Meat">Meat</option>
+            <option value="Others">Others</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Snack Foods">Snack Foods</option>
+            <option value="Soft Drinks">Soft Drinks</option>
+            <option value="Starchy Foods">Starchy Foods</option>
+        </select>
+
+        <label for="Item_MRP">Item MRP:</label>
+        <input type="text" name="Item_MRP" id="Item_MRP" required>
+
+        <label for="Outlet_Identifier">Outlet Identifier:</label>
+        <select name="Outlet_Identifier" id="Outlet_Identifier">
+            <option value="OUT010">OUT010</option>
+            <option value="OUT013">OUT013</option>
+            <option value="OUT017">OUT017</option>
+            <option value="OUT018">OUT018</option>
+            <option value="OUT019">OUT019</option>
+            <option value="OUT027">OUT027</option>
+            <option value="OUT035">OUT035</option>
+            <option value="OUT045">OUT045</option>
+            <option value="OUT046">OUT046</option>
+            <option value="OUT049">OUT049</option>
+        </select>
+
+        <label for="Outlet_Establishment_Year">Outlet Establishment Year:</label>
+        <input type="text" name="Outlet_Establishment_Year" id="Outlet_Establishment_Year" required>
+
+        <label for="Outlet_Size">Outlet Size:</label>
+        <select name="Outlet_Size" id="Outlet_Size">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Small">Small</option>
+        </select>
+
+        <label for="Outlet_Location_Type">Outlet Location Type:</label>
+        <select name="Outlet_Location_Type" id="Outlet_Location_Type">
+            <option value="Tier 1">Tier 1</option>
+            <option value="Tier 2">Tier 2</option>
+            <option value="Tier 3">Tier 3</option>
+        </select>
+
+        <label for="Outlet_Type">Outlet Type:</label>
+        <select name="Outlet_Type" id="Outlet_Type">
+            <option value="Grocery Store">Grocery Store</option>
+            <option value="Supermarket Type1">Supermarket Type1</option>
+            <option value="Supermarket Type2">Supermarket Type2</option>
+            <option value="Supermarket Type3">Supermarket Type3</option>
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
